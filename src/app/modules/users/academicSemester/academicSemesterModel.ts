@@ -6,7 +6,7 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
     title: {
       required: true,
       type: String,
-      enum
+      enum:['Autumn','Summar','Fall']
     },
     year: {
       required: true,
@@ -15,14 +15,41 @@ const academicSemesterSchema = new Schema<IAcademicSemester>(
     code: {
       required: true,
       type: String,
+      enum:['01','02','03']
     },
     startMonth: {
       required: true,
       type: String,
+      enum:[
+        'January',
+        'February',
+        'March',
+        'April',
+        'May',
+        'June',
+        'July',
+        'August',
+        'September',
+        'October',
+        'November',
+        'December'
+      ]
     },
     endMonth: {
       required: true,
       type: String,
+      enum:[  'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December']
     },
   },
   {
