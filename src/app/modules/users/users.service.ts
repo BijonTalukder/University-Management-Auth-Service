@@ -4,9 +4,8 @@ import { User } from './users.model'
 import { generatedUserId } from './users.utill'
 
 const createUser = async (user: IUser): Promise<IUser | null> => {
- 
- const id = await generatedUserId()
- user.id = id
+  const id = await generatedUserId()
+  user.id = id
   if (!user.password) {
     user.password = config.default_student_pass as string
   }
