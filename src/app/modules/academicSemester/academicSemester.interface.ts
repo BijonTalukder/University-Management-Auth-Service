@@ -8,4 +8,5 @@ export type IAcademicSemester = {
     startMonth:Month;
     endMonth: Month;
 }
+
 export type AcademicSemesterModel = Model<IAcademicSemester>
