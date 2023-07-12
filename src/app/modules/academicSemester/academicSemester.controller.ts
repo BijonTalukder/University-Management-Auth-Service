@@ -31,7 +31,8 @@ const getAllSemester = async (
     //   sortOrder: req.query.sortOrder,
     // }
     const paginationOptions = pick(req.query,['page', 'limit', 'sortBy','sortOrder'])
-    const result = await AcademicSemesterService.getAllSemesters(paginationOptions)
+   const filters = pick(req.query,['searchTerm']);
+    const result = await AcademicSemesterService.getAllSemesters(filters,paginationOptions)
     res.status(200).json({
       statusCode: 200,
       success:true,

@@ -3,10 +3,13 @@ export type Month = 'January' | 'February' | 'March' | 'April' | 'May' | 'June' 
 
 export type IAcademicSemester = {
     title:'Autumn' | "Summer" | 'Fall';
-    year:number;
+    year:string;
     code:'01' | '02' | '03';
     startMonth:Month;
     endMonth: Month;
+}
+export type IAcademicSemesterFilters = {
+    searchTerm?:string;
 }
 
 export type AcademicSemesterModel = Model<IAcademicSemester>
