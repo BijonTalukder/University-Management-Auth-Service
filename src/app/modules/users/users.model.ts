@@ -10,6 +10,9 @@ const userSchema = new Schema<IUser>(
     },
     password: { type: String, required: true, unique: true },
   },
-  { timestamps: true }
+  { timestamps: true,
+  toJson:{
+    virtuals:true
+  } }
 )
 export const User = model<IUser, UserModel>('Users', userSchema)
